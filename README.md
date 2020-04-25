@@ -61,7 +61,9 @@
  ```
  storm jar <stormJarPath>   in.dream_lab.bm.stream_iot.storm.topo.micro.MicroTopologyDriver  C  <TopoName>  <inputDataFilePath used by CustomEventGen and spout>   PLUG-<expNum>  <rate as 1x,2x>  <outputLogPath>   <tasks.properties File Path>   <microTaskName>
  
- 
+ Example:
+~/apache-storm-2.1.0/bin/storm jar modules/storm/target/iot-bm-storm-0.1-jar-with-dependencies.jar in.dream_lab.bm.stream_iot.storm.topo.micro.MicroTopologyDriver C ETLTopology ~/Desktop/iotbenchmark/data/HomeC.csv PLUG-2 1 ~/data /home/shaanzie/Desktop/riot-bench/modules/tasks/src/main/java/in/dream_lab/bm/stream_iot/tasks/Utils.java Accumlator
+
  ```
 - For microTaskName please refer  switch logic in  MicroTopologyFactory class in package   "in.dream_lab.bm.stream_iot.storm.topo.micro"   
 
